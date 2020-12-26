@@ -15,6 +15,14 @@ class App extends React.Component {
     );
   }
 
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
   render() {
     return <SeasonDisplay lat={this.state.lat} err={this.state.errorMsg} />
   }

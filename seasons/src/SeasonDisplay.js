@@ -1,13 +1,15 @@
 import React from 'react';
 
 const SeasonDisplay = (props) => {
-    return (
-        <div>
-            Season Display : {props.lat}<br />
-            <hr />
-            {props.err}
-        </div>
-    );
+    if (props.err && !props.lat) {
+        return <div>{props.err}</div>;
+    }
+
+    if (!props.err && props.lat) {
+        return <div>{props.lat}</div>;
+    }
+
+    return <div>Loading..</div>;
 };
 
 export default SeasonDisplay;
