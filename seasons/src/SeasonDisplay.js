@@ -30,7 +30,7 @@ const SeasonDisplay = (props) => {
         );
     }
 
-    return <div><Spinner /></div>;
+    return <div><Spinner message="please allow location" /></div>;
 };
 
 export default SeasonDisplay;
