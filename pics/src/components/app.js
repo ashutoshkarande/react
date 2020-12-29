@@ -5,9 +5,16 @@ import axios from 'axios'
 class App extends React.Component {
 
     onSearchSubmit(term) {
-        axios.get('',{
-
-        });
+        axios.get('https://api.unsplash.com/search/photos', {
+            params: {
+                query: term
+            },
+            headers: {
+                Authorization: 'Client-ID '
+            }
+        }).then((response) => {
+            console.log(response.data.results);
+        })
     }
 
     render() {
